@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { auth } from "../../firebase/firebase"
 import { onAuthStateChanged } from "firebase/auth"
-import { Instagram, Twitter, PlusSquare, LayoutDashboard } from "lucide-react" // Ícones novos para as funções
+import { Instagram, Twitter, PlusSquare, LayoutDashboard } from "lucide-react" 
 import "./header.css"
 
 function Header() {

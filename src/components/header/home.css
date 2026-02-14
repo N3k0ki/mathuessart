@@ -4,12 +4,12 @@
   object-fit: cover;
 }
 
-/* IMAGEM VERTICAL */
+
 .art-image.vertical {
   aspect-ratio: 1080 / 1600;
 }
 
-/* IMAGEM HORIZONTAL */
+
 .art-image.horizontal {
   aspect-ratio: 1600 / 1080;
 }

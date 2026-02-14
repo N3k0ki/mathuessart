@@ -11,7 +11,6 @@
   max-width: 500px !important;
 }
 
-/* Esconde o input original e estiliza o Label como botão */
 input[type="file"] {
   display: none;
 }
@@ -33,7 +32,6 @@ input[type="file"] {
   background: #646cff22;
 }
 
-/* Container do Recortador */
 .crop-container {
   position: relative;
   width: 100%;
@@ -44,7 +42,6 @@ input[type="file"] {
   overflow: hidden;
 }
 
-/* Estilo para ajustar o Cropper dentro da box */
 .reactEasyCrop_Container {
   border-radius: 8px;
 }

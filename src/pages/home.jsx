@@ -16,7 +16,6 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // 1. Escuta de Posts (Sua lógica original)
     const q = query(collection(db, "posts"), orderBy("createdAt", "desc"));
     const unsubscribePosts = onSnapshot(q, (querySnapshot) => {
       const postsArray = [];
@@ -27,11 +26,9 @@ function Home() {
       setLoading(false);
     });
 
-    // 2. Lógica do Pop-up de Login salvo
     const unsubscribeAuth = onAuthStateChanged(auth, (currentUser) => {
       const justLoggedIn = sessionStorage.getItem('justLoggedIn');
 
-      // Se existe usuário logado e ele NÃO acabou de passar pela tela de login
       if (currentUser && !justLoggedIn) {
         setShowModal(true);
       }
@@ -48,7 +45,7 @@ function Home() {
     await signOut(auth);
     sessionStorage.removeItem('justLoggedIn');
     setShowModal(false);
-    navigate("/"); // Garante que permanece na home mas deslogado
+    navigate("/"); 
   };
 
   const handleContinue = () => {
@@ -79,7 +76,6 @@ function Home() {
         )}
       </main>
 
-      {/* MODAL PERSONALIZADO */}
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">

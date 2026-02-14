@@ -1,24 +1,23 @@
-/* O container que segura o texto e o botão */
+
 .art-footer {
   display: flex;
-  justify-content: space-between; /* Manda o primeiro item pra esquerda e o último pra direita */
-  align-items: center;           /* Alinha verticalmente no meio */
-  padding: 8px 15px;            /* Espaçamento interno */
-  width: 100%;                   /* Ocupa toda a largura do card */
+  justify-content: space-between; 
+  align-items: center;           
+  padding: 8px 15px;            
+  width: 100%;                   
   box-sizing: border-box;
-  background-color: #fff;        /* Ajuste conforme seu design */
+  background-color: #fff;        
 }
 
-/* O texto do post */
+
 .art-caption {
   margin: 0;
   font-size: 14px;
   color: #333;
-  text-align: left;              /* Garante alinhamento à esquerda */
-  flex: 1;                       /* Faz o texto ocupar o espaço disponível */
+  text-align: left;             
+  flex: 1;                       
 }
 
-/* O botão da lixeira */
 .delete-icon-btn {
   background: none;
   border: none;
@@ -26,13 +25,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ff4d4d;                /* Cor vermelha para o ícone */
+  color: #ff4d4d;               
   padding: 5px;
   transition: transform 0.2s ease;
-  margin-left: 10px;             /* Pequeno espaço caso o texto seja muito longo */
+  margin-left: 10px;             
 }
 
 .delete-icon-btn:hover {
-  transform: scale(1.2);         /* Efeito de aumento ao passar o mouse */
+  transform: scale(1.2);       
   color: #cc0000;
 }

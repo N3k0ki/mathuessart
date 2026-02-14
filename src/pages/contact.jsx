@@ -1,4 +1,4 @@
-import React from 'react'; // Adicione se der erro
+import React from 'react';
 import '../components/contact/contact.css'
 import ContactSection from '../components/contact/contactsection';
 import { Contact } from 'lucide-react';

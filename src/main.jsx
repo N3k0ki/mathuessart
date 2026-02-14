@@ -16,7 +16,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path='/contact' element={<ContactPage />} />
         
-        {/* Rota para Adicionar Post */}
         <Route
           path="/addpost"
           element={
@@ -26,7 +25,6 @@ function App() {
           }
         />
 
-        {/* NOVA ROTA: Rota para Gerenciar/Apagar Posts */}
         <Route
           path="/posts"
           element={

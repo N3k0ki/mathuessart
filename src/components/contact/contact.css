@@ -1,7 +1,6 @@
 /* contact.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
-/* Reset básico para garantir que o formulário fique centralizado na página */
 .contact-section-container {
     display: flex;
     flex-direction: column;
@@ -9,11 +8,10 @@
     justify-content: center;
     padding: 60px 20px;
     font-family: 'Inter', sans-serif;
-    background-color: #fafafa; /* Fundo levemente cinza para destacar o card branco */
+    background-color: #fafafa; 
     min-height: 80vh;
 }
 
-/* Título superior centralizado */
 .contact-info-panel {
     text-align: center;
     margin-bottom: 40px;
@@ -26,10 +24,9 @@
     letter-spacing: -0.02em;
 }
 
-/* Card do Formulário */
 .form {
     width: 100%;
-    max-width: 500px; /* Largura controlada para leitura confortável */
+    max-width: 500px; 
     background: #ffffff;
     padding: 40px;
     border-radius: 16px;
@@ -45,7 +42,6 @@
     text-align: center;
 }
 
-/* Espaçamento dos campos */
 .form form div {
     margin-bottom: 24px;
 }
@@ -58,7 +54,6 @@
     margin-bottom: 8px;
 }
 
-/* Inputs Minimalistas */
 .form input, 
 .form textarea {
     width: 100%;
@@ -75,7 +70,7 @@
 .form input:focus, 
 .form textarea:focus {
     outline: none;
-    border-color: #000; /* Borda preta minimalista ao focar */
+    border-color: #000;
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.05);
 }
 
@@ -84,11 +79,10 @@
     min-height: 120px;
 }
 
-/* Botão Moderno de Alto Contraste */
 .form button {
     width: 100%;
     padding: 14px;
-    background-color: #111827; /* Preto profundo */
+    background-color: #111827; 
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -107,7 +101,6 @@
     transform: scale(0.98);
 }
 
-/* Mensagem de Status */
 .form p {
     margin-top: 20px;
     font-size: 0.9rem;
@@ -118,7 +111,7 @@
     border-radius: 8px;
 }
 
-/* Ajustes para telas pequenas */
+
 @media (max-width: 480px) {
     .form {
         padding: 25px;
@@ -138,7 +131,7 @@
     border-radius: 8px;
     font-size: 0.9rem;
     text-align: center;
-    background-color: #f3f4f6; /* Cinza claro neutro */
+    background-color: #f3f4f6; 
     color: #374151;
     border: 1px solid #e5e7eb;
     animation: fadeIn 0.3s ease-in;
