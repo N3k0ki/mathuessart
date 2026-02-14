@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-principal: "Poppins", sans-serif;
+  --cor-principal: #ededed;
+  --roxo-destaque: #b678ff;
+  --cinza-claro: #7e7e7e;
+  --branco: #ffffff;
+  --texto: #443e2f;
+}
+
+body {
+  font-family: var(--font-principal);
+  overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 20px clamp(20px, 5vw, 80px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cor-principal);
+  transition: box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* LOGO */
+
+.logo span {
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 30px;
+  color: var(--texto);
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--texto);
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--cinza-claro);
+  border-bottom: 2px solid var(--texto);
+}
+
+/* MENU TOGGLE */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 32px;
+  height: 24px;
+  position: relative;
+  z-index: 2000;
+}
+
+.menu-toggle span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: var(--texto);
+  border-radius: 2px;
+  transition: 0.4s ease;
+}
+
+.menu-toggle span:nth-child(1) {
+  top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+  top: 10px;
+}
+
+.menu-toggle span:nth-child(3) {
+  top: 20px;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 20px 30px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-principal);
+    flex-direction: column;
+    align-items: center;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+
+    transition: all 0.4s ease;
+  }
+
+  .nav.active {
+    max-height: 300px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav a {
+    margin: 20px 0;
+  }
+}
+
+.home-container {
+  background-color: #f5f5f5;
+  /* Fundo claro para destacar as artes */
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* sempre 3 por linha */
+  gap: 60px;
+  padding: 60px;
+  align-items: center;
+}
+
+.art-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  break-inside: avoid;
+  margin-bottom: 25px;
+}
+
+.image-wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* quadrado fixo */
+  background: #e8e3de;
+  /* cor da moldura */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  /* cria efeito moldura */
+  box-sizing: border-box;
+}
+
+
+.art-image.vertical {
+  width: 75%;
+  max-width: 280px;
+  height: auto;
+}
+
+.art-image.horizontal {
+  width: 100%;
+  height: auto;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Garante que a imagem preencha o espaço sem esticar */
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.02);
+  /* Efeito suave ao passar o mouse */
+}
+
+.art-image.vertical {
+  aspect-ratio: 1080 / 1600;
+}
+
+/* HORIZONTAL */
+.art-image.horizontal {
+  aspect-ratio: 1600 / 1080;
+}
+
+.art-caption {
+  margin-top: 10px;
+  color: white;
+  color: #333;
+  margin: 0;
+  text-transform: lowercase;
+  /* Para ficar igual ao seu exemplo */
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.loading-text {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #888;
+  margin-top: 50px;
+}
+
+.logout-button {
+  background: transparent;
+  border: 1px solid #ff4d4d;
+  color: #ff4d4d;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* Ajuste nos links do nav para aceitar o componente Link do router */
+.nav a,
+.nav .logout-button {
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+/* No mobile, o menu-toggle precisa estar acima de tudo */
+.menu-toggle {
+  z-index: 1001;
+}
+
+.logout-button {
+  margin-left: 15px;
+  /* Espaço entre Contato e Sair no Desktop */
+}
+
+@media (max-width: 768px) {
+  .logout-button {
+    margin-left: 0;
+    margin-top: 10px;
+    /* Espaço vertical no Mobile */
+  }
+}
+
+/* Overlay que escurece o fundo da página */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* Fundo preto transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  /* Garante que fique acima de tudo */
+  backdrop-filter: blur(3px);
+  /* Efeito de desfoque no fundo */
+}
+
+/* Caixa do Modal */
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal-content p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Botões do Modal */
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-confirm {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.btn-logout {
+  background: transparent;
+  color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background: #ff4d4d;
+  color: white;
+}
+
+.btn-confirm:hover {
+  opacity: 0.8;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav-social-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  /* Espaço entre o texto e os ícones */
+}
+
+/* Estilização dos links dos ícones */
+.social-icon {
+  color: inherit;
+  /* Mantém a cor do texto do header */
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+/* Ajuste para mobile (dentro do menu sanduíche) */
+@media (max-width: 768px) {
+  .nav-social-group {
+    flex-direction: column;
+    /* Ou mantenha row se quiser eles lado a lado no mobile */
+    gap: 20px;
+  }
+}
+
+
+/* VERTICAL */
