@@ -1,18 +1,104 @@
-# React + Vite
+# 🎨 Matheussart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **Um espaço para apresentar trabalhos, projetos e criatividade através da web.**
 
-Currently, two official plugins are available:
+O **Matheussart** é um projeto pessoal desenvolvido para apresentar trabalhos e projetos de forma visual, moderna e profissional.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A proposta do projeto é criar uma experiência digital que valorize o conteúdo apresentado, utilizando uma interface cuidadosamente desenvolvida e tecnologias modernas para garantir uma navegação fluida e responsiva.
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## ✨ Sobre o projeto
 
-Note: This will impact Vite dev & build performances.
+O Matheussart foi desenvolvido como um **portfólio digital**, reunindo trabalhos e projetos em uma única plataforma.
 
-## Expanding the ESLint configuration
+O projeto busca combinar:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🎨 Design e identidade visual
+* 💻 Desenvolvimento web
+* 📱 Responsividade
+* ⚡ Performance
+* 🧩 Organização de conteúdo
+* ✨ Experiência do usuário
+
+Mais do que simplesmente apresentar trabalhos, a proposta é criar uma experiência que faça com que cada projeto tenha seu próprio espaço e destaque.
+
+---
+
+## 🎯 Objetivos
+
+* Apresentar trabalhos e projetos de forma organizada
+* Criar uma presença digital profissional
+* Valorizar visualmente os projetos apresentados
+* Oferecer uma experiência de navegação intuitiva
+* Desenvolver uma interface responsiva e moderna
+* Criar uma base que possa evoluir junto com novos trabalhos
+
+---
+
+## 💻 Tecnologias
+
+O projeto foi desenvolvido utilizando **React** e tecnologias modernas do desenvolvimento web.
+
+### Principais tecnologias
+
+* ⚛️ **React**
+* 🟨 **JavaScript**
+* 🌐 **HTML5**
+* 🎨 **CSS3**
+* ⚡ Ferramentas modernas de desenvolvimento web
+
+---
+
+## 🧩 Desenvolvimento
+
+Durante o desenvolvimento, foram trabalhados conceitos como:
+
+* Componentização com React
+* Estruturação de interfaces
+* Organização e reutilização de componentes
+* Design responsivo
+* Experiência do usuário
+* Hierarquia visual
+* Organização de conteúdo
+* Desenvolvimento de interfaces modernas
+
+---
+
+## 📱 Responsividade
+
+O projeto foi desenvolvido pensando em diferentes dispositivos e tamanhos de tela.
+
+**Desktop • Tablet • Mobile**
+
+A interface se adapta ao espaço disponível para proporcionar uma experiência consistente independentemente do dispositivo utilizado.
+
+---
+
+## 🚀 Objetivo do projeto
+
+O Matheussart também representa uma oportunidade de explorar novas possibilidades no desenvolvimento de interfaces e experimentar diferentes soluções para apresentação de conteúdo visual.
+
+O projeto pode evoluir continuamente conforme novos trabalhos e funcionalidades forem adicionados.
+
+---
+
+## 👨‍💻 Desenvolvimento
+
+**Desenvolvido por Ana Clara Amorim**
+
+**Full Stack Developer** apaixonada por transformar ideias em experiências digitais através de código, design e criatividade.
+
+### Stack
+
+`React` `JavaScript` `HTML5` `CSS3`
+
+---
+
+<div align="center">
+
+### 🎨 Create. Code. Express.
+
+**Matheussart**
+
+</div>
